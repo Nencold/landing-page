@@ -113,8 +113,17 @@ function lightOrDarkBtns (){
     })
 }
 
+
 function lightOrDarkContent(){
     document.querySelector('.header').classList.toggle('dark');
+    let headerLogo = document.querySelector('.header__img a img');
+    headerLogo.classList.toggle('dark');
+    headerLogo.removeAttribute('src');
+    if(headerLogo.classList.contains('dark')){
+        headerLogo.setAttribute('src', './images/logo/Group-dark.svg')
+    } else {
+        headerLogo.setAttribute('src', './images/logo/Group.svg')
+    }
 }
 
 
